@@ -73,8 +73,6 @@ class Theater{
 
                 System.out.print("\n1. Book Seats\n2. Go Back\n\nChoose an Option : ");
 
-                // TODO: 02-03-2023 Implement the function to book tickets
-
                 int ch = scn.nextInt();
 
                 if(ch==1){
