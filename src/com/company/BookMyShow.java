@@ -60,6 +60,8 @@ class Theater{
         }
 
         boolean flag = true;
+
+
         while(flag) {
             System.out.println("\n---------- Available Timings ----------");
             for (int i = 0; i < show_timings.size(); i++) System.out.println((i + 1) + ". " + show_timings.get(i));
@@ -79,6 +81,7 @@ class Theater{
                     System.out.println("\n---------- Book Seats ----------");
                     System.out.print("\nEnter No of Tickets : ");
                     int n = scn.nextInt();
+
                     if(cur_show.canAccommodate(n)){
                         boolean booked = user.bookTicket(this,movie,cur_screen,cur_show,n);
                         if(booked) return false;
@@ -175,7 +178,6 @@ class Show{
 
 class User{
     String name, pass, contact;
-//    HashMap<String, Ticket> ticket_map = new HashMap<String, Ticket>();
     ArrayList<Ticket> myTickets = new ArrayList<Ticket>();
     Scanner scn = new Scanner(System.in);
 
@@ -278,8 +280,6 @@ class Ticket{
     }
 
 }
-
-
 
 public class BookMyShow {
 
@@ -495,7 +495,5 @@ public class BookMyShow {
 
             }
         }
-
-
     }
 }
